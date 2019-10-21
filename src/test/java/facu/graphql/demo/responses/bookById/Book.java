@@ -1,4 +1,4 @@
-package facu.graphql.demo.DTO;
+package facu.graphql.demo.responses.bookById;
 
 import facu.graphql.demo.enumerators.Genre;
 import lombok.AllArgsConstructor;
@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookInput {
-
+public class Book {
+    private Integer id;
     private String name;
-
-    private Integer pageCount;
-
     private Genre genre;
+    private Integer pageCount;
 }
