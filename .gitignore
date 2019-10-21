@@ -2,6 +2,7 @@ HELP.md
 .gradle
 build/
 bin/
+doc/.DS_Store
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
