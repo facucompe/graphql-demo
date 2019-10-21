@@ -1,4 +1,4 @@
-package facu.graphql.demo.DTO;
+package facu.graphql.demo.responses.bookById;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthorInput {
-
-    private String firstName;
-
-    private String lastName;
+public class BookById {
+    private BookByIdData data;
 }

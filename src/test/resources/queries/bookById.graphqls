@@ -2,7 +2,6 @@ query bookById($id: ID!) {
     bookById(id: $id) {
         id
         name
-        genre
         pageCount
     }
 }
