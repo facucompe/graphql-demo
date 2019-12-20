@@ -2,7 +2,7 @@ package facu.graphql.demo.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import facu.graphql.demo.enumerators.Genre;
+import facu.graphql.demo.DTO.BookInput;
 import facu.graphql.demo.models.Book;
 import facu.graphql.demo.repositories.BookRepository;
 import graphql.schema.DataFetchingEnvironment;
@@ -19,12 +19,11 @@ public class BookResolver implements GraphQLQueryResolver, GraphQLMutationResolv
         return bookRepository.findById(id).get();
     }
 
-    // TODO: Input types are not working. However information can be parsed from dataFetchingEnvironment
-    public Book createBook(String name, Integer pageCount, Genre genre, DataFetchingEnvironment dataFetchingEnvironment){
+    public Book createBook(BookInput bookInput, DataFetchingEnvironment dataFetchingEnvironment){
         Book book = new Book();
-        book.setName(name);
-        book.setPageCount(pageCount);
-        book.setGenre(genre);
+        book.setName(bookInput.getName());
+        book.setGenre(bookInput.getGenre());
+        book.setPageCount(bookInput.getPageCount());
         return bookRepository.save(book);
     }
 }
