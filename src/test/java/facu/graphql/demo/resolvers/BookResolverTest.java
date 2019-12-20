@@ -28,7 +28,7 @@ import static junit.framework.TestCase.assertTrue;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class BookResolverTest extends GraphQLBaseTest {
+public class BookResolverTest {
 
     @Autowired
     private BookRepository bookRepository;
